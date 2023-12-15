@@ -1,9 +1,11 @@
 .wrapper {
   width: 100%;
-  margin: 0;
   display: grid;
-  grid-template-areas: "nav1" "nav2" "main";
-  grid-template-columns: 80px 80px auto;
+  grid-template-rows: 80px,80px,auto;
+  grid-template-areas: 
+  "nav1"
+  "nav2" 
+  "main";
 }
 
 body {
@@ -12,27 +14,26 @@ body {
   background-color: wheat;
 }
 
-nav {
-  grid-area: nav1;
-  display: grid;
-  grid-template-columns: 10fr 1fr;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 .local {
-  grid-area: nav2;
+  grid-area: "nav2";
   display: grid;
-  grid-template-columns: 10fr 1fr;
-  position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .local > ul {
   display: grid;
+  grid-template-columns: 1fr, 1fr;
 }
+
+nav {
+  grid-area: "nav1";
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 
 nav > ul {
   display: grid;
@@ -118,4 +119,8 @@ nav ul li:hover .dropdown-planets {
 
 .dropdown-planets li a:hover {
   background-color: #000;
+}
+
+main{
+  grid-area: "main";
 }
