@@ -14,7 +14,7 @@ body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
-  background-color: wheat;
+	background-image: url("./img/photo-1516339901601-2e1b62dc0c45.png");
 }
 
 .local {
