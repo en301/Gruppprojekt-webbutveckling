@@ -30,6 +30,7 @@ nav {
   grid-area: nav1;
   display: grid;
   grid-template-columns: 10fr 1fr;
+  border: solid black 1px;
   height: 80px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -53,16 +54,16 @@ nav > ul > li {
   height: 30px;
 }
 
-nav > ul > li:nth-child(1) > a {
+nav > ul > li:nth-child(1) > a > img{
   padding: 0;
 }
 
 nav ul li img {
   max-width: 50px;
+
 }
 
-nav ul li a,
-nav a {
+nav ul li a{
   width: 100px;
   font-size: 17px;
   text-decoration: none;
