@@ -33,9 +33,11 @@ nav {
   display: grid;
   grid-template-columns: 10fr 1fr;
   border: solid rgb(0, 0, 0) 1px;
+  z-index: 1;
   height: 80px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(9px);
 }
 
 
