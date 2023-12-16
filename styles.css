@@ -25,15 +25,14 @@ body {
 
 .local > ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 10%;
+  grid-template-columns: 1fr 5fr 5fr 1fr;
 }
 
 nav {
   grid-area: nav1;
   display: grid;
   grid-template-columns: 10fr 1fr;
-  border: solid black 1px;
+  border: solid rgb(0, 0, 0) 1px;
   height: 80px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -57,7 +56,7 @@ nav > ul > li {
   height: 30px;
 }
 
-nav > ul > li:nth-child(1) > a > img{
+nav > ul > li:nth-child(1) > img{
   padding: 0;
 }
 
@@ -117,5 +116,7 @@ nav ul li:hover .dropdown-planets {
 
 main{
   grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   overflow-y: scroll;
 }
