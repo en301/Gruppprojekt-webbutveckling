@@ -41,7 +41,7 @@ nav {
 
 nav > ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 5fr 5fr;
   grid-gap: 60px;
   text-align: center;
 }
@@ -56,7 +56,7 @@ nav > ul > li {
   height: 30px;
 }
 
-nav > ul > li:nth-child(1) > img{
+nav > ul > li:nth-child(1) > a{
   padding: 0;
 }
 
