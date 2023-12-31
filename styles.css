@@ -1,10 +1,22 @@
 .wrapper {
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
-	margin: auto; /* Centrerar elementet horisontellt. */
 	display: grid; /* Använder CSS Grid för layout. */
 	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
-	grid-template-rows: 80px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
-	grid-template-areas: "header" "main"; /* Definierar områden i grid. */
+	grid-template-rows: 160px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
+	grid-template-areas:
+		"nav"
+		"main"; /* Definierar områden i grid. */
+}
+
+.nav-wrapper {
+	/* Denna används för att */
+	grid-area: nav;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 160px;
 }
 
 body {
@@ -12,16 +24,11 @@ body {
 	margin: 0;
 	background-image: url("./img/photo-1516339901601-2e1b62dc0c45.png");
 	color: white;
+	background-color: black;
 }
 
-h1 {
-	display: none;
-}
-
-nav {
+.global-nav {
 	display: grid;
-	grid-template-columns: 10fr 1fr;
-	margin-top: -4px;
 	height: 80px;
 	width: 100%;
 	position: fixed;
@@ -31,7 +38,13 @@ nav {
 	backdrop-filter: blur(9px);
 }
 
-nav > ul {
+.local-nav {
+	display: grid;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(9px);
+}
+
+.global-nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr 2fr;
 	grid-gap: 60px;
@@ -39,7 +52,7 @@ nav > ul {
 	text-align: center;
 }
 
-nav > ul > li {
+.global-nav > ul > li {
 	list-style-type: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -49,13 +62,31 @@ nav > ul > li {
 	height: 30px;
 }
 
-nav > ul > li:nth-child(1) > a {
+.global-nav > ul > li:first-child > a {
 	padding: 0;
 	padding-top: 5px;
 }
 
-nav ul li img {
+.global-nav ul li img {
 	max-width: 50%;
+}
+
+.local-nav > ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 60px;
+	margin-top: 3px;
+	text-align: center;
+}
+
+.local-nav > ul > li {
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	text-align: center;
+	align-items: center;
+	height: 30px;
 }
 
 nav ul li a,
@@ -68,6 +99,11 @@ nav a {
 	color: white;
 	padding: 20px;
 	display: block;
+}
+
+nav ul li a:hover {
+	background-color: rgba(10, 32, 90, 0.85); /* Default color */
+	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
 .dropdown-planets {
@@ -113,7 +149,8 @@ nav ul li:hover .dropdown-planets {
 }
 
 .dropdown-planets li a:hover {
-	background-color: #000;
+	background-color: rgba(10, 32, 90, 0.85); /* Default color */
+	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
 .index-main {
