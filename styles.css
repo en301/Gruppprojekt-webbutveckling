@@ -9,7 +9,7 @@
 }
 
 .nav-wrapper {
-	/* Denna används för att */
+	/* Denna används för att skapa en grid över den area man navigerar i*/
 	grid-area: nav;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
@@ -27,6 +27,10 @@ body {
 	background-color: black;
 }
 
+nav ul {
+	padding: 0;
+}
+
 .global-nav {
 	display: grid;
 	height: 80px;
@@ -38,17 +42,10 @@ body {
 	backdrop-filter: blur(9px);
 }
 
-.local-nav {
-	display: grid;
-	background-color: rgba(0, 0, 0, 0.6);
-	backdrop-filter: blur(9px);
-}
-
 .global-nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr 2fr;
 	grid-gap: 60px;
-	margin-top: 3px;
 	text-align: center;
 }
 
@@ -71,11 +68,17 @@ body {
 	max-width: 50%;
 }
 
+
+.local-nav {
+	display: grid;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(9px);
+}
+
 .local-nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 60px;
-	margin-top: 3px;
 	text-align: center;
 }
 
@@ -91,7 +94,7 @@ body {
 
 nav ul li a,
 nav a {
-	margin-top: 7px;
+	margin-top: -5px;
 	width: 100px;
 	top: 0px;
 	font-size: 17px;
@@ -107,7 +110,7 @@ nav ul li a:hover {
 }
 
 .dropdown-planets {
-	margin-left: -50px;
+	margin-left: -23px;
 	visibility: hidden;
 	opacity: 0;
 	transform: scaleY(0);
@@ -135,7 +138,7 @@ nav ul li:hover .dropdown-planets {
 }
 
 .dropdown-planets li {
-	margin-left: 8px;
+	margin-left: 25px;
 	width: 160px;
 	text-align: center;
 	margin-top: 15px;
@@ -153,8 +156,9 @@ nav ul li:hover .dropdown-planets {
 	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
-.index-main {
+main {
 	display: grid;
 	grid-area: main;
-	height: 2000px;
+	grid-template-columns: 1fr 1fr;
+	height: 2879px;
 }
