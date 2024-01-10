@@ -41,8 +41,15 @@ nav ul {
 	padding: 0;
 }
 
+ul li{
+	background-size: 50px;
+}
+
 ul .shield{
-	list-style-image: url();
+	background-image: url(./img/earth_logo.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 30px;
 }
 
 .global-nav {
