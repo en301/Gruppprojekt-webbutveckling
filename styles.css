@@ -2,6 +2,16 @@
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
 	display: grid; /* Använder CSS Grid för layout. */
 	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
+	grid-template-rows: 80px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
+	grid-template-areas:
+		"nav"
+		"main"; /* Definierar områden i grid. */
+}
+
+.wrapperWithLocal {
+	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
+	display: grid; /* Använder CSS Grid för layout. */
+	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
 	grid-template-rows: 160px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
 	grid-template-areas:
 		"nav"
@@ -29,6 +39,10 @@ body {
 
 nav ul {
 	padding: 0;
+}
+
+ul .shield{
+	list-style-image: url();
 }
 
 .global-nav {
@@ -64,10 +78,9 @@ nav ul {
 	padding-top: 5px;
 }
 
-.global-nav ul li img {
+nav ul li img {
 	max-width: 50%;
 }
-
 
 .local-nav {
 	display: grid;
