@@ -1,8 +1,19 @@
-.wrapper {
+.wrapperWithLocal {
+	/* Denna wrapper används i sidan med en lokalmeny, anledningen till att det finns två ol*/
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
 	display: grid; /* Använder CSS Grid för layout. */
 	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
 	grid-template-rows: 160px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
+	grid-template-areas:
+		"nav"
+		"main"; /* Definierar områden i grid. */
+}
+
+.wrapper {
+	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
+	display: grid; /* Använder CSS Grid för layout. */
+	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
+	grid-template-rows: 80px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
 	grid-template-areas:
 		"nav"
 		"main"; /* Definierar områden i grid. */
@@ -153,8 +164,40 @@ nav ul li:hover .dropdown-planets {
 	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
-.index-main {
+#index-main {
 	display: grid;
 	grid-area: main;
 	height: 2000px;
+}
+
+#index-main img {
+	display: flex;
+	justify-self: center;
+}
+
+#index-main img:nth-child(1) {
+	width: 5%;
+}
+#index-main img:nth-child(2) {
+	width: 5%;
+}
+
+#index-main img:nth-child(3) {
+	width: 10%;
+}
+#index-main img:nth-child(4) {
+	width: 10%;
+}
+
+#index-main img:nth-child(5) {
+	width: 50%;
+}
+#index-main img:nth-child(6) {
+	width: 50%;
+}
+#index-main img:nth-child(7) {
+	width: 10%;
+}
+#index-main img:nth-child(8) {
+	width: 10%;
 }
