@@ -41,11 +41,11 @@ nav ul {
 	padding: 0;
 }
 
-ul li{
+nav ul li{
 	background-size: 50px;
 }
 
-ul .shield{
+nav ul .shield{
 	background-image: url(../img/shield.png);
 	background-repeat: no-repeat;
 	background-position: left center;
