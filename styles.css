@@ -33,27 +33,28 @@ body {
 	padding: 0;
 	margin: 0;
 	background-image: url("./img/photo-1516339901601-2e1b62dc0c45.png");
-	color: white;
-	background-color: black;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
 }
 
 nav ul {
 	padding: 0;
 }
-
-nav ul li{
+/*Puss Zache*/
+nav > ul > li {
 	background-size: 50px;
+	padding-left: 20px;
 }
 
-nav ul .shield{
+nav ul .shield {
 	background-image: url(../img/shield.png);
 	background-repeat: no-repeat;
 	background-position: left center;
-	padding-left: 30px;
-	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-bottom: 14px;
 }
 
-.global-nav {
+header nav {
 	display: grid;
 	height: 80px;
 	width: 100%;
@@ -64,14 +65,14 @@ nav ul .shield{
 	backdrop-filter: blur(9px);
 }
 
-.global-nav > ul {
+header nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr 2fr;
 	grid-gap: 60px;
 	text-align: center;
 }
 
-.global-nav > ul > li {
+header nav > ul > li {
 	list-style-type: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -81,7 +82,7 @@ nav ul .shield{
 	height: 30px;
 }
 
-.global-nav > ul > li:first-child > a {
+header nav > ul > li:first-child > a {
 	padding: 0;
 	padding-top: 5px;
 }
@@ -120,7 +121,7 @@ nav a {
 	top: 0px;
 	font-size: 17px;
 	text-decoration: none;
-	color: white;
+	color: rgb(255, 255, 255);
 	padding: 20px;
 	display: block;
 }
@@ -181,5 +182,15 @@ main {
 	display: grid;
 	grid-area: main;
 	grid-template-columns: 1fr 1fr;
-	height: 2879px;
+	gap: 30px;
+	height: 100%;
+}
+
+p {
+	font-size: 25px;
+	line-height: 150%;
+}
+
+.wrapperWithLocal img {
+	width: 100%;
 }
