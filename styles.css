@@ -194,3 +194,52 @@ p {
 .wrapperWithLocal img {
 	width: 100%;
 }
+
+
+#index main {
+	display: grid;
+	grid-area: main;
+	grid-template-columns: 1fr;
+	height: 2000px;
+}
+
+#index main img {
+	display: flex;
+	justify-self: center;
+	margin: 5%;
+	transform: scale(1); /* Set the default scale to 1 */
+	transition: transform 0.6s ease; /* Add a smooth transition effect */
+}
+
+#index main img:hover {
+	/* Tack zacke puss puss*/
+	cursor: pointer; /* Change the cursor to a pointer on hover */
+	transform: scale(1.2);
+}
+
+#index main img:nth-child(1) {
+	width: 3%;
+}
+#index main img:nth-child(2) {
+	width: 8%;
+}
+
+#index main img:nth-child(3) {
+	width: 10%;
+}
+#index main img:nth-child(4) {
+	width: 7%;
+}
+
+#index main img:nth-child(5) {
+	width: 80%;
+}
+#index main img:nth-child(6) {
+	width: 80%;
+}
+#index main img:nth-child(7) {
+	width: 50%;
+}
+#index main img:nth-child(8) {
+	width: 20%;
+}
