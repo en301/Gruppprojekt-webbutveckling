@@ -182,13 +182,13 @@ main {
 	display: grid;
 	grid-area: main;
 	grid-template-columns: 1fr 1fr;
-	gap: 30px;
 	height: 100%;
 }
 
 p {
 	font-size: 25px;
 	line-height: 150%;
+	padding-left: 10px;
 }
 
 .wrapperWithLocal img {
