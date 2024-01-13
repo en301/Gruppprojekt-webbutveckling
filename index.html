@@ -4,6 +4,7 @@
 		<link href="styles.css" rel="stylesheet" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./img/earth.png" />
 		<title>Start | Rymdsida</title>
 	</head>
 	<body>
@@ -13,7 +14,7 @@
 					<ul>
 						<li>
 							<a href="index.html">
-								<img class="logo" src="./img/earth_logo.png" alt="Jorden"
+								<img class="logo" src="./img/earth.png" alt="Jorden"
 							/></a>
 						</li>
 						<li>
@@ -58,15 +59,31 @@
 			</header>
 
 			<main id="index-main">
-				<img src="./img/mercury.png" />
-				<img src="./img/venus.png" />
-				<img src="./img/earth_logo.png" />
-				<img src="./img/mars.png" />
-				<img src="./img/jupiter.png" />
-				<img src="./img/saturn.png" />
-				<img src="./img/uranus.png" />
-				<img src="./img/neptune.png" />
+				<img src="./img/mercury.png" alt="En bild på Merkurius" />
+				<img src="./img/venus.png" alt="En bild på Venus" />
+				<img src="./img/earth.png" alt="En bild på Jorden" />
+				<img src="./img/mars.png" alt="En bild på Mars" />
+				<img src="./img/jupiter.png" alt="En bild på Jupiter" />
+				<img src="./img/saturn.png" alt="En bild på Saturnus" />
+				<img src="./img/uranus.png" alt="En bild på Uranus" />
+				<img src="./img/neptune.png" alt="En bild på Neptunus" />
 			</main>
 		</div>
+
+		<div id="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<h2>Merkurius</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deserunt autem
+					voluptatum laborum fugiat illo, eveniet tenetur earum! Excepturi quia possimus
+					nihil et soluta, hic velit aspernatur fuga eaque vel.
+				</p>
+				<img src="./img/mercury.png" alt="En bild på Merkurius" />
+			</div>
+		</div>
+
+		<script type="module" src="./script/index.js"></script>
+		<script type="module" src="./script/modal.js"></script>
 	</body>
 </html>

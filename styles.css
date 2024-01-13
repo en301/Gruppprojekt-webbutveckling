@@ -1,5 +1,5 @@
 .wrapperWithLocal {
-	/* Denna wrapper används i sidan med en lokalmeny, anledningen till att det finns två olika navbars*/
+	/* Denna wrapper används i sidan med en lokalmeny. Anledningen till varför det krävs två separata wrapper är för att de kräver olioka stora grid-template-rows */
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
 	display: grid; /* Använder CSS Grid för layout. */
 	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
@@ -10,6 +10,7 @@
 }
 
 .wrapper {
+	/*Denna wrapper är identisk till .wrapperWithLocal förutom att grid-template-rows är lite annurlunda.*/
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
 	display: grid; /* Använder CSS Grid för layout. */
 	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
@@ -173,12 +174,15 @@ nav ul li:hover .dropdown-planets {
 #index-main img {
 	display: flex;
 	justify-self: center;
-    margin: 5%;
+	margin: 5%;
+	transform: scale(1); /* Set the default scale to 1 */
+	transition: transform 0.6s ease; /* Add a smooth transition effect */
 }
 
-#index-main img:hover { /* Tack zacke puss puss*/
-    transform: scale(1.2);
-    transition: 0.6s ease;
+#index-main img:hover {
+	/* Tack zacke puss puss*/
+	cursor: pointer; /* Change the cursor to a pointer on hover */
+	transform: scale(1.2);
 }
 
 #index-main img:nth-child(1) {
