@@ -1,3 +1,5 @@
+/*Malte*/
+
 .wrapper {
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
 	display: grid; /* Använder CSS Grid för layout. */
@@ -37,23 +39,6 @@ body {
 	background-color: rgb(0, 0, 0);
 }
 
-nav ul {
-	padding: 0;
-}
-/*Puss Zache*/
-nav > ul > li {
-	background-size: 50px;
-	padding-left: 20px;
-}
-
-nav ul .shield {
-	background-image: url(../img/shield.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-left: 20px;
-	padding-bottom: 14px;
-}
-
 header nav {
 	display: grid;
 	height: 80px;
@@ -80,15 +65,6 @@ header nav > ul > li {
 	text-align: center;
 	align-items: center;
 	height: 30px;
-}
-
-header nav > ul > li:first-child > a {
-	padding: 0;
-	padding-top: 5px;
-}
-
-nav ul li img {
-	max-width: 50%;
 }
 
 .local-nav {
@@ -178,23 +154,6 @@ nav ul li:hover .dropdown-planets {
 	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
-main {
-	display: grid;
-	grid-area: main;
-	grid-template-columns: 1fr 1fr;
-	height: 100%;
-}
-
-p {
-	font-size: 25px;
-	line-height: 150%;
-	padding-left: 10px;
-}
-
-.wrapperWithLocal img {
-	width: 100%;
-}
-
 
 #index main {
 	display: grid;
@@ -242,4 +201,49 @@ p {
 }
 #index main img:nth-child(8) {
 	width: 20%;
+}
+
+/*Emil*/
+
+nav ul {
+	padding: 0;
+}
+
+header nav > ul > li:first-child > a {
+	padding: 0;
+	padding-top: 5px;
+}
+
+nav ul li img {
+	max-width: 50%;
+}
+
+nav > ul > li {
+	background-size: 50px;
+	padding-left: 20px;
+}
+
+nav ul .shield {
+	background-image: url(../img/shield.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	padding-bottom: 14px;
+}
+
+main {
+	display: grid;
+	grid-area: main;
+	grid-template-columns: 1fr 1fr;
+	height: 100%;
+}
+
+p {
+	font-size: 25px;
+	line-height: 150%;
+	padding-left: 10px;
+}
+
+.wrapperWithLocal img , .wrapper img{
+	width: 100%;
 }
