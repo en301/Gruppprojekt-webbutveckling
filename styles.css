@@ -238,12 +238,14 @@ main {
 	height: 100%;
 }
 
+.wrapperWithLocal img , .wrapper img{
+	width: 100%;
+}
+
+/*Love*/
+
 p {
 	font-size: 25px;
 	line-height: 150%;
 	padding-left: 10px;
-}
-
-.wrapperWithLocal img , .wrapper img{
-	width: 100%;
 }
