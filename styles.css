@@ -203,6 +203,39 @@ nav ul li:hover .dropdown-planets {
 	width: 20%;
 }
 
+.modal {
+	/*Detta är all styling till modaln, inget märkvärdigt, bara en genomskinlig bakgrund och en vit kant.*/
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	width: 50%;
+	border-style: solid;
+	border-color: white;
+	border-radius: 15px; /* Adjust the value to your preference for rounded corners */
+}
+
+.modal p {
+	font-size: 20px;
+}
+
+.modal img {
+	/*Detta justerar bara bilden i modaln */
+	height: 25em;
+	width: 25em;
+}
+
+.modal::backdrop {
+	/* Detta lägger till en snygg blur effect till modaln samt är den genomskinlig till en grad */
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(9px);
+}
+
+.modal:focus {
+	/* Detta gör bara så att när modaln är öppnad så high-lightas den inte.*/
+	outline: none;
+}
+
 /*Emil*/
 
 nav ul {

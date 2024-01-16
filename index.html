@@ -69,19 +69,16 @@
 				<img src="./img/neptune.png" alt="En bild på Neptunus" />
 			</main>
 		</div>
-
-		<div id="modal">
-			<div class="modal-content">
-				<span class="close" onclick="closeModal()">&times;</span>
-				<h2>Merkurius</h2>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deserunt autem
-					voluptatum laborum fugiat illo, eveniet tenetur earum! Excepturi quia possimus
-					nihil et soluta, hic velit aspernatur fuga eaque vel.
-				</p>
-				<img src="./img/mercury.png" alt="En bild på Merkurius" />
-			</div>
-		</div>
+		
+		<dialog class="modal">
+			<section>
+				<h2 class="modalTitle">Placeholder beskrivning</h2>
+				<p class="modalDescription">Placeholder beskrivning</p>
+			</section>
+			<section>
+				<img class="modalImage" src="./img/mercury.png" alt="En bild på Merkurius" />
+			</section>
+		</dialog>
 
 		<script type="module" src="./script/index.js"></script>
 		<script type="module" src="./script/modal.js"></script>
