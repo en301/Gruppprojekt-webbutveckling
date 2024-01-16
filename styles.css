@@ -43,6 +43,7 @@ header nav {
 	height: 80px;
 	width: 100%;
 	position: fixed;
+	top: 0px;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(9px);
@@ -58,7 +59,6 @@ header nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr 2fr;
 	grid-gap: 60px;
-	margin-top: 3px;
 	text-align: center;
 }
 
@@ -101,15 +101,20 @@ header nav ul li img {
 
 nav ul li a,
 nav a {
-	margin-top: 7px;
+	margin-top: -5px;
 	width: 100px;
 	top: 0px;
 	font-size: 17px;
 	text-decoration: none;
-	color: white;
+	color: rgb(255, 255, 255);
 	padding: 20px;
 	display: block;
 	border-radius: 10px; /*Rundar hörnen*/
+}
+
+nav > ul > li {
+	background-size: 50px;
+	padding-left: 20px;
 }
 
 nav ul .shield {
@@ -173,14 +178,14 @@ nav ul li:hover .dropdown-planets {
 	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
-#index-main {
+#index main {
 	display: grid;
 	grid-area: main;
 	height: 2000px;
 	grid-template-columns: 1fr;
 }
 
-#index-main img {
+#index main img {
 	display: flex; /*display:flex; & justify-self: center; används för att centrera alla planter i mitten av skärmen*/
 	justify-self: center;
 	margin: 5%;
@@ -188,37 +193,37 @@ nav ul li:hover .dropdown-planets {
 	transition: transform 0.6s ease; /* Detta lägger till så att förstoringseffekten planeterna får blir mer dynamisk och ser finare ut.*/
 }
 
-#index-main img:hover {
+#index main img:hover {
 	/*Detta gör så att planeterna blir 20% större när man håller muspekaren över dem*/
 	cursor: pointer;
 	transform: scale(1.2);
 }
 
-#index-main img:nth-child(1) {
+#index main img:nth-child(1) {
 	/*Alla dessa används bara för att manuellt försöka skapa ett skalenligt solsystem.*/
 	width: 3%;
 }
-#index-main img:nth-child(2) {
+#index main img:nth-child(2) {
 	width: 8%;
 }
 
-#index-main img:nth-child(3) {
+#index main img:nth-child(3) {
 	width: 10%;
 }
-#index-main img:nth-child(4) {
+#index main img:nth-child(4) {
 	width: 7%;
 }
 
-#index-main img:nth-child(5) {
+#index main img:nth-child(5) {
 	width: 80%;
 }
-#index-main img:nth-child(6) {
+#index main img:nth-child(6) {
 	width: 80%;
 }
-#index-main img:nth-child(7) {
+#index main img:nth-child(7) {
 	width: 50%;
 }
-#index-main img:nth-child(8) {
+#index main img:nth-child(8) {
 	width: 20%;
 }
 
@@ -232,6 +237,9 @@ nav ul li:hover .dropdown-planets {
 	border-style: solid;
 	border-color: white;
 	border-radius: 15px; /* Adjust the value to your preference for rounded corners */
+	cursor: default; /*Detta gör så att musen inte ändras när man håller muspekaren över texten.*/
+	user-select: none; /*Detta gör så att man inte kan markera texten i modaln, jag tycker bara att det ser lite snyggare ut att användaren 
+	inte råkar markera texten när de ska stänga ned modaln*/
 }
 
 .modal p {
@@ -246,8 +254,16 @@ nav ul li:hover .dropdown-planets {
 
 .modal::backdrop {
 	/* Detta lägger till en snygg blur effect till modaln samt är den genomskinlig till en grad */
-	background-color: rgba(0, 0, 0, 0.5);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 	backdrop-filter: blur(9px);
+	background-image: linear-gradient(
+		150deg,
+		rgba(255, 0, 255, 0.1),
+		rgba(102, 51, 153, 0.1),
+		rgba(30, 144, 255, 0.1),
+		rgba(0, 0, 0, 0.1)
+	);
+	transition: background-image 0.6s ease; /* Detta lägger till så att förstoringseffekten planeterna får blir mer dynamisk och ser finare ut.*/
 }
 
 .modal:focus {
