@@ -18,39 +18,39 @@
 							/></a>
 						</li>
 						<li>
-							<a href="#">Startsida</a>
+							<a href="index.html">Startsida</a>
 						</li>
 						<li>
-							<a href="#">Rymdfakta</a>
+							<a href="./html/fun_facts/solar_system.html">Rymdfakta</a>
 						</li>
 						<li>
 							<a href="#">Planeter</a>
 							<ul class="dropdown-planets">
 								<li>
-									<a href="#">Merkurius</a>
+									<a href="./html/planets/mercury.html">Merkurius</a>
 								</li>
 								<li>
-									<a href="#">Venus</a>
-								</li>
-
-								<li>
-									<a href="#">Jorden</a>
-								</li>
-								<li>
-									<a href="#">Mars</a>
-								</li>
-								<li>
-									<a href="#">Jupiter</a>
+									<a href="./html/planets/venus.html">Venus</a>
 								</li>
 
 								<li>
-									<a href="#">Saturnus</a>
+									<a href="./html/planets/earth.html">Jorden</a>
 								</li>
 								<li>
-									<a href="#">Uranus</a>
+									<a href="./html/planets/mars.html">Mars</a>
 								</li>
 								<li>
-									<a href="#">Neptunus</a>
+									<a href="./html/planets/jupiter.html">Jupiter</a>
+								</li>
+
+								<li>
+									<a href="./html/planets/saturn.html">Saturnus</a>
+								</li>
+								<li>
+									<a href="./html/planets/uranus.html">Uranus</a>
+								</li>
+								<li>
+									<a href="./html/planets/neptune.html">Neptunus</a>
 								</li>
 							</ul>
 						</li>
@@ -70,18 +70,15 @@
 			</main>
 		</div>
 
-		<div id="modal">
-			<div class="modal-content">
-				<span class="close" onclick="closeModal()">&times;</span>
-				<h2>Merkurius</h2>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deserunt autem
-					voluptatum laborum fugiat illo, eveniet tenetur earum! Excepturi quia possimus
-					nihil et soluta, hic velit aspernatur fuga eaque vel.
-				</p>
-				<img src="./img/mercury.png" alt="En bild på Merkurius" />
-			</div>
-		</div>
+		<dialog class="modal">
+			<section>
+				<h2 class="modalTitle">Placeholder beskrivning</h2>
+				<p class="modalDescription">Placeholder beskrivning</p>
+			</section>
+			<section>
+				<img class="modalImage" src="./img/mercury.png" alt="En bild på Merkurius" />
+			</section>
+		</dialog>
 
 		<script type="module" src="./script/index.js"></script>
 		<script type="module" src="./script/modal.js"></script>

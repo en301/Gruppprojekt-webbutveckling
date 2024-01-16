@@ -1,14 +1,3 @@
-.wrapperWithLocal {
-	/* Denna wrapper används i sidan med en lokalmeny. Anledningen till varför det krävs två separata wrapper är för att de kräver olioka stora grid-template-rows */
-	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
-	display: grid; /* Använder CSS Grid för layout. */
-	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
-	grid-template-rows: 160px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
-	grid-template-areas:
-		"nav"
-		"main"; /* Definierar områden i grid. */
-}
-
 .wrapper {
 	/*Denna wrapper är identisk till .wrapperWithLocal förutom att grid-template-rows är lite annurlunda.*/
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
@@ -20,13 +9,23 @@
 		"main"; /* Definierar områden i grid. */
 }
 
+.wrapperWithLocal {
+	/* Denna wrapper används i sidan med en lokalmeny. Anledningen till varför det krävs två separata wrapper är för att de kräver olioka stora grid-template-rows */
+	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
+	display: grid; /* Använder CSS Grid för layout. */
+	height: 100%; /* Sätter höjden till 100% av förälderelementet. */
+	grid-template-rows: 160px 1fr auto; /* Delar upp rader i grid, topp 80px, mellanfrånrum och botten auto. */
+	grid-template-areas:
+		"nav"
+		"main"; /* Definierar områden i grid. */
+}
 .nav-wrapper {
-	/* Denna används för att */
+	/* Denna används för att få den lokala menyn att faktiskt hamna under den globala. 
+	Detta skapar en grid och delar upp den i två bitar där gloabal menyn är högst upp och den lokala längst ned.*/
 	grid-area: nav;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	position: fixed;
-	top: 0;
 	width: 100%;
 	height: 160px;
 }
@@ -39,12 +38,11 @@ body {
 	background-color: black;
 }
 
-.global-nav {
+header nav {
 	display: grid;
 	height: 80px;
 	width: 100%;
 	position: fixed;
-	top: 0;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(9px);
@@ -56,7 +54,7 @@ body {
 	backdrop-filter: blur(9px);
 }
 
-.global-nav > ul {
+header nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr 2fr;
 	grid-gap: 60px;
@@ -64,7 +62,7 @@ body {
 	text-align: center;
 }
 
-.global-nav > ul > li {
+header nav > ul > li {
 	list-style-type: none;
 	margin-left: auto;
 	margin-right: auto;
@@ -74,12 +72,12 @@ body {
 	height: 30px;
 }
 
-.global-nav > ul > li:first-child > a {
+header nav > ul > li:first-child > a {
 	padding: 0;
 	padding-top: 5px;
 }
 
-.global-nav ul li img {
+header nav ul li img {
 	max-width: 50%;
 }
 
@@ -111,6 +109,15 @@ nav a {
 	color: white;
 	padding: 20px;
 	display: block;
+	border-radius: 10px; /*Rundar hörnen*/
+}
+
+nav ul .shield {
+	background-image: url(../img/shield.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	padding-bottom: 14px;
 }
 
 nav ul li a:hover {
@@ -126,7 +133,7 @@ nav ul li a:hover {
 	/* Start with no height (collapsed) */
 	transform-origin: top;
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.75);
 	/* Match the navbar background color */
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
@@ -161,7 +168,8 @@ nav ul li:hover .dropdown-planets {
 }
 
 .dropdown-planets li a:hover {
-	background-color: rgba(10, 32, 90, 0.85); /* Default color */
+	/*Detta lägger till high-lighting till navigationen */
+	background-color: rgba(10, 32, 90, 0.85);
 	transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
@@ -169,23 +177,25 @@ nav ul li:hover .dropdown-planets {
 	display: grid;
 	grid-area: main;
 	height: 2000px;
+	grid-template-columns: 1fr;
 }
 
 #index-main img {
-	display: flex;
+	display: flex; /*display:flex; & justify-self: center; används för att centrera alla planter i mitten av skärmen*/
 	justify-self: center;
 	margin: 5%;
-	transform: scale(1); /* Set the default scale to 1 */
-	transition: transform 0.6s ease; /* Add a smooth transition effect */
+	transform: scale(1);
+	transition: transform 0.6s ease; /* Detta lägger till så att förstoringseffekten planeterna får blir mer dynamisk och ser finare ut.*/
 }
 
 #index-main img:hover {
-	/* Tack zacke puss puss*/
-	cursor: pointer; /* Change the cursor to a pointer on hover */
+	/*Detta gör så att planeterna blir 20% större när man håller muspekaren över dem*/
+	cursor: pointer;
 	transform: scale(1.2);
 }
 
 #index-main img:nth-child(1) {
+	/*Alla dessa används bara för att manuellt försöka skapa ett skalenligt solsystem.*/
 	width: 3%;
 }
 #index-main img:nth-child(2) {
@@ -210,4 +220,54 @@ nav ul li:hover .dropdown-planets {
 }
 #index-main img:nth-child(8) {
 	width: 20%;
+}
+
+.modal {
+	/*Detta är all styling till modaln, inget märkvärdigt, bara en genomskinlig bakgrund och en vit kant.*/
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	width: 50%;
+	border-style: solid;
+	border-color: white;
+	border-radius: 15px; /* Adjust the value to your preference for rounded corners */
+}
+
+.modal p {
+	font-size: 20px;
+}
+
+.modal img {
+	/*Detta justerar bara bilden i modaln */
+	height: 25em;
+	width: 25em;
+}
+
+.modal::backdrop {
+	/* Detta lägger till en snygg blur effect till modaln samt är den genomskinlig till en grad */
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(9px);
+}
+
+.modal:focus {
+	/* Detta gör bara så att när modaln är öppnad så high-lightas den inte.*/
+	outline: none;
+}
+
+main {
+	display: grid;
+	grid-area: main;
+	grid-template-columns: 1fr 1fr;
+	height: 100%;
+}
+
+p {
+	font-size: 25px;
+	line-height: 150%;
+	padding-left: 10px;
+}
+
+.wrapperWithLocal img {
+	width: 100%;
 }
