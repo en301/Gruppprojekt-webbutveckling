@@ -284,6 +284,7 @@ p {
 	padding-left: 10px;
 }
 
-.wrapperWithLocal img {
+.wrapperWithLocal img,
+.wrapper img{
 	width: 100%;
 }
