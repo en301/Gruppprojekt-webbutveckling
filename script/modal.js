@@ -1,5 +1,7 @@
-export const openModal = (img) => { //Malte
+export const openModal = (img) => {
+	//Malte
 	const planets = {
+		//Eftersom att jag inte har en databas måste jag tyvärr spara all text lokalt på detta vis, ser inte snyggt ut, men funkar.
 		earth: [
 			"Jorden",
 			"Jorden är vår hemplanet och den enda kända planeten där liv existerar. Den har en diversifierad miljö med kontinenter, hav och en atmosfär som stöder liv. Jorden roterar vilket ger dag och natt, och dess måne, Månen, påverkar tidvattnet på planetens hav.",
@@ -34,28 +36,28 @@ export const openModal = (img) => { //Malte
 		],
 	};
 
-	const modal = document.querySelector(".modal");
-	const src = img.target.src;
-	const filename = src.substring(src.lastIndexOf("/") + 1);
-	const planetNameEnglish = filename.replace(".png", "");
-	const planetNameSwedish = planets[planetNameEnglish][0];
-	const planetFacts = planets[planetNameEnglish][1];
+	const modal = document.querySelector(".modal"); //Här tar jag modal klassen från sidan
+	const src = img.target.src; //Här läser jag av bildens filnamn
+	const filename = src.substring(src.lastIndexOf("/") + 1); // Har tar jag bort källan till bilden, dvs ./img/planet.png till planet.png
+	const planetNameEnglish = filename.replace(".png", ""); //Här tar jag bort .png för att bara lämna bildens namn
+	const planetNameSwedish = planets[planetNameEnglish][0]; //Har tar jag data från objektet med all planet information
+	const planetFacts = planets[planetNameEnglish][1]; //hör jag jag samma sak, fast istället för titel tar jag faktan
 
-	const modalTitle = document.querySelector(".modalTitle");
+	const modalTitle = document.querySelector(".modalTitle"); //Här tar jag alla placeholder grejer från modaln så att jag kan ändra dem
 	const modalDescription = document.querySelector(".modalDescription");
 	const modalImage = document.querySelector(".modalImage");
 
-	modalTitle.textContent = `${planetNameSwedish}`;
+	modalTitle.textContent = `${planetNameSwedish}`; //Här ändrar jag placeholder texten till den rätta texten
 	modalDescription.textContent = planetFacts;
 	modalImage.src = `../img/${filename}`;
 
-	modal.style.display = "grid";
-	modal.showModal();
-	modal.focus(); // Set focus to the modal itself to avoid highlighting
+	modal.style.display = "grid"; //Eftersom att jag använder en grid i elementet måste jag manuellt ändra den från display:none till display:grid
+	modal.showModal(); //Detta är en inbyggd funktion till <dialog>
+	modal.focus(); // Tar bort en skum highlighting grej
 };
 
 export const closeModal = () => {
-	const modal = document.querySelector(".modal");
-	modal.style.display = "none";
-	modal.close();
+	const modal = document.querySelector(".modal"); // jag vill inte kommentera här.
+	modal.style.display = "none"; //Eftersom att jag använder en grid i elementet måste jag manuellt ändra display till none
+	modal.close(); //Detta är en inbyggd funktion till <dialog>
 };
