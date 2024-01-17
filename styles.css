@@ -1,3 +1,5 @@
+/*Malte*/
+
 .wrapper {
 	/*Denna wrapper är identisk till .wrapperWithLocal förutom att grid-template-rows är lite annurlunda.*/
 	width: 100%; /* Sätter bredden till 100% av förälderelementet. */
@@ -77,10 +79,6 @@ header nav > ul > li:first-child > a {
 	padding-top: 5px;
 }
 
-header nav ul li img {
-	max-width: 50%;
-}
-
 .local-nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -110,19 +108,6 @@ nav a {
 	padding: 20px;
 	display: block;
 	border-radius: 10px; /*Rundar hörnen*/
-}
-
-nav > ul > li {
-	background-size: 50px;
-	padding-left: 20px;
-}
-
-nav ul .shield {
-	background-image: url(../img/shield.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-left: 20px;
-	padding-bottom: 14px;
 }
 
 nav ul li a:hover {
@@ -272,6 +257,25 @@ nav ul li:hover .dropdown-planets {
 	outline: none;
 }
 
+/*Emil*/
+
+header nav ul li img {
+	max-width: 50%;
+}
+
+nav > ul > li {
+	background-size: 50px;
+	padding-left: 20px;
+}
+
+nav ul .shield {
+	background-image: url(../img/shield.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	padding-bottom: 14px;
+}
+
 main {
 	display: grid;
 	grid-area: main;
@@ -279,13 +283,27 @@ main {
 	height: 100%;
 }
 
+.wrapperWithLocal img,
+.wrapper img {
+	width: 100%;
+}
+
+h2{
+	padding-left: 10px;
+}
+
+/*Love*/
+
 p {
 	font-size: 25px;
 	line-height: 150%;
 	padding-left: 10px;
 }
 
-.wrapperWithLocal img,
-.wrapper img {
-	width: 100%;
+/*Malte*/
+
+@media screen and (max-width: 1366px) {
+    p {
+        font-size: 20px;
+    }
 }
