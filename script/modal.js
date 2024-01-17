@@ -1,4 +1,4 @@
-export const openModal = (img) => {
+export const openModal = (img) => { //Malte
 	const planets = {
 		earth: [
 			"Jorden",

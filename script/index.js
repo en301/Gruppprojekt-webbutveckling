@@ -1,4 +1,4 @@
-import {
+import { //Malte
 	openModal,
 	closeModal,
 } from "./modal.js"; /*Jag personligen älskar att organisera min kod i olika filer, jag tycker att det gör det 1000 gånger lättare att jobba på saker
