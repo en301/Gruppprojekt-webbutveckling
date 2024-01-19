@@ -1,23 +1,23 @@
-<!DOCTYPE html> <!--Malte-->
-<html lang="sv">
-	<head>
-		<link href="styles.css" rel="stylesheet">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/x-icon" href="./img/earth.png">
-		<title>Start | Rymdsida</title>
+<!DOCTYPE html> <!--Malte--><!--Gör så att html kommer användas till hemsidan-->
+<html lang="sv"><!--Sätter språket som ska användas till svenska-->
+	<head><!--Delen av hemsidan som inte syns på hemsidan utan bestämmer viktiga saker som ska finnas och hur det ska fungera-->
+		<link href="styles.css" rel="stylesheet"><!--Länkar css med html så dom kan kommunicera med varandra-->
+		<meta charset="UTF-8"><!-- Väljer så att den kan hantera alla tecken -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Gör så att bredden blir samma som bredden på enheten som hemsidan visas på  -->
+		<link rel="icon" type="image/x-icon" href="./img/earth.png"><!--Skapar så att man kan ändra den lilla iconen på toppen av hemsidan -->
+		<title>Start | Rymdsida</title><!--Ändrar titeln på hemsidan -->
 	</head>
-	<body id="index">
-		<div class="wrapper">
-			<header>
-				<nav>
-					<ul>
-						<li>
-							<a href="index.html">
-								<img class="logo" src="./img/earth.png" alt="Jorden">
+	<body id="index"> <!-- Skapar en id i bodyn, body är själva kroppen av hemsidan idn används för att ändra griden så att den täcker hela sidan-->
+		<div class="wrapper"><!--Skapar en class som gör så att man kan skapa en grid och bestämmer storlek på hemsidan-->
+			<header><!--Skapar toppen av hemsidan-->
+				<nav><!--Skapar en navigations meny -->
+					<ul> <!-- Skapar en lista -->
+						<li> <!--Gör så att listan får punkter-->
+							<a href="index.html"> <!--Detta är en länk i en lista som tar dig till index.-->
+								<img class="logo" src="./img/earth.png" alt="Jorden"> <!--En bild som man kan klicka på för att ta sig till index-->
 							</a>
 						</li>
-						<li class="shield">
+						<li class="shield"> <!--Här är klassen shield för att listan ska få en sköld på den plats av sidan man är så man kan se var man är-->
 							<a href="index.html">Startsida</a>
 						</li>
 						<li>
@@ -25,9 +25,9 @@
 						</li>
 						<li>
 							<a href="#">Planeter</a>
-							<ul class="dropdown-planets">
+							<ul class="dropdown-planets"> <!--En ny lista för dropdown menyn för att kunna ta sig till planeterna, klassen används för att man ska kunna designa dropdown menyn-->
 								<li>
-									<a href="./html/planets/mercury.html">Merkurius</a>
+									<a href="./html/planets/mercury.html">Merkurius</a> 
 								</li>
 								<li>
 									<a href="./html/planets/venus.html">Venus</a>
@@ -58,8 +58,8 @@
 				</nav>
 			</header>
 
-			<main>
-				<img src="./img/mercury.png" alt="En bild på Merkurius">
+			<main><!--Huvuddelen av hemsidan-->
+				<img src="./img/mercury.png" alt="En bild på Merkurius"><!--En bild på planeten-->
 				<img src="./img/venus.png" alt="En bild på Venus">
 				<img src="./img/earth.png" alt="En bild på Jorden">
 				<img src="./img/mars.png" alt="En bild på Mars">

@@ -27,63 +27,63 @@
 	grid-area: nav;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
-	position: fixed;
+	position: fixed; /*Gör att den alltid ligger högst upp på sidan*/
 	width: 100%;
 	height: 160px;
 }
 
-body {
-	padding: 0;
-	margin: 0;
-	background-image: url("./img/photo-1516339901601-2e1b62dc0c45.png");
-	color: white;
-	background-color: black;
+body { /*En typselektor till body*/
+	padding: 0; /*Gör att det inte finns någon padding innan vi lägger till någon*/
+	margin: 0; /*Gör att sidan sträcker sig till kanterna av skärmen*/
+	background-image: url("./img/photo-1516339901601-2e1b62dc0c45.png"); /*Lägger till bakgrundsbilden*/
+	color: white; /*Gör att all text blir vit*/
+	background-color: black; /*Om bakgrundsbilden inte finns på någon plats blir bakgrunden svart*/
 }
 
-header nav {
+header nav { /*Förändrar alla navs i header. En avkomlingsselektor*/
 	display: grid;
 	height: 80px;
 	width: 100%;
 	position: fixed;
-	top: 0px;
-	z-index: 1;
+	top: 0px; /*Gör att det inte finns något mellanrum högst upp*/
+	z-index: 1; /*Gör att blur effekten funkar*/
 	background-color: rgba(0, 0, 0, 0.6);
-	backdrop-filter: blur(9px);
+	backdrop-filter: blur(9px); /*Skapar blur effekten bakom*/
 }
 
-.local-nav {
+.local-nav { /*En klassselektor som förändrar den lokala menyn*/
 	display: grid;
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(9px);
 }
 
-header nav > ul {
+header nav > ul { /*Förändrar ul om det ligger direkt under en nav i en header*/
 	display: grid;
-	grid-template-columns: 1fr 1fr 2fr 2fr;
-	grid-gap: 60px;
-	text-align: center;
+	grid-template-columns: 1fr 1fr 2fr 2fr; /*Skapar kolumner neråt så att texten ligger på rätt plats*/
+	grid-gap: 60px; /*Skapar ett mellanrum mellan kolumnerna*/
+	text-align: center; /*Centrerar texten*/
 }
 
-header nav > ul > li {
-	list-style-type: none;
-	margin-left: auto;
-	margin-right: auto;
+header nav > ul > li { /*En barnselektor till en li som ligger direkt under en ul som ligger direkt under en nav i en header*/
+	list-style-type: none; /*Tar bort alla punkter framför listan*/
+	margin-left: auto; /*Gör en automatisk margin åt vänster*/
+	margin-right: auto; /*Gör en automatisk margin åt höger*/
 	width: 150px;
 	text-align: center;
-	align-items: center;
+	align-items: center; /*Gör att allt centreras i griden*/
 	height: 30px;
 }
 
-header nav > ul > li:first-child > a {
-	padding: 0;
-	padding-top: 5px;
+header nav > ul > li:first-child > a { /*Gör att den första länken under li, ul, nav och header förändras*/
+	padding: 0; 
+	padding-top: 5px; /*Lägger till padding högst upp så bilden hamnar rätt*/
 }
 
 .local-nav > ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 60px;
-	margin-top: 3px;
+	margin-top: 3px; /*Flyttar ner länkarna lite*/
 	text-align: center;
 }
 
@@ -97,13 +97,13 @@ header nav > ul > li:first-child > a {
 	height: 30px;
 }
 
-nav ul li a,
+nav ul li a, /*gruppselektor*/
 nav a {
 	margin-top: -5px;
 	width: 100px;
 	top: 0px;
-	font-size: 17px;
-	text-decoration: none;
+	font-size: 17px; /*Förändrar storleken på texten*/
+	text-decoration: none; /*tar bort dekorationer*/
 	color: rgb(255, 255, 255);
 	padding: 20px;
 	display: block;
@@ -259,44 +259,44 @@ nav ul li:hover .dropdown-planets {
 /*Emil*/
 
 header nav ul li img {
-	max-width: 50%;
+	max-width: 50%; /*Gör att bliden bara är 50% av sin ursprungliga sorlek*/
 }
 
 nav > ul > li {
-	background-size: 50px;
-	padding-left: 20px;
+	background-size: 50px; /*Minskar storleken på skölden*/
+	padding-left: 20px; /*Flyttar griden åt sidan så att skölden får plats*/
 }
 
 nav ul .shield {
-	background-image: url(../img/shield.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-left: 20px;
-	padding-bottom: 14px;
+	background-image: url(../img/shield.png); /*Lägger till skölden som bakgrundsbild*/
+	background-repeat: no-repeat; /*Gör att den bara visas en gång*/
+	background-position: left center; /*Gör att den centreras och hamnar åt vänster*/
+	padding-left: 20px; /*Mer padding på skölden så att den syns*/
+	padding-bottom: 14px; /*Samma som föregående fast under*/
 }
 
 main {
 	display: grid;
-	grid-area: main;
+	grid-area: main; /*Namnger grid delen till main*/
 	grid-template-columns: 1fr 1fr;
 	height: 100%;
 }
 
-.wrapperWithLocal img,
+.wrapperWithLocal img, 
 .wrapper img {
-	width: 100%;
+	width: 100%; /*Gör att bilderna täcker hela delen av griden*/
 }
 
 h2 {
-	padding-left: 10px;
+	padding-left: 10px; /*Gör att rubriken flyttas lite åt sidan*/
 }
 
 /*Love*/
 
 p {
-	font-size: 25px;
-	line-height: 150%;
-	padding-left: 10px;
+	font-size: 25px; /*Förändrar storleken på brödtext*/
+	line-height: 150%; /*Ökar mellanrummet mellan texten*/
+	padding-left: 10px; /*Flyttar texten lite åt sidan*/
 }
 
 /*Malte*/
@@ -307,7 +307,7 @@ p {
 	}
 }
 
-a:link {
+a:link { /*Ville se om love focus hate gjorde skillnad (Det gjorde inte det)*/
 	color: inherit;
 }
 a:visited {
@@ -318,4 +318,8 @@ a:hover {
 }
 a:active {
 	color: inherit;
+}
+
+a:focus{
+	scale:100%
 }
